@@ -1,0 +1,29 @@
+{
+  "name": "@aezen/logger",
+  "version": "1.1.2",
+  "description": "A simple and lightweight logger module for Aezen Bot in Discord.",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "Aezen",
+    "Aezen bot",
+    "AezenBot",
+    "logger",
+    "console",
+    "logs"
+  ],
+  "repository": "git+https://github.com/AezenBot/packages.git",
+  "author": "@aezen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AezenBot/packages/issues"
+  },
+  "homepage": "https://github.com/AezenBot/packages/tree/main/packages/utilities/logger",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "yarn": "^1.22.22"
+  }
+}

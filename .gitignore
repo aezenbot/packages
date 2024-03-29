@@ -1,0 +1,8 @@
+/node_modules
+/testing
+
+replit.nix
+
+.upm
+.config
+.replit
