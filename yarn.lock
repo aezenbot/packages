@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@aezen/logger@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@aezen/logger/-/logger-1.1.3.tgz#71b2d1d98fab1432f632907125759f81b34d0f76"
+  integrity sha512-hI7XnntDv4q2+BitDhbV4DyOPlug6mB+42hW8YfopVH6yHFAt3+pnAnZA6rdf/qexmECx2ZlWQgHmATt7NL92g==
+  dependencies:
+    chalk "^5.3.0"
+    yarn "^1.22.22"
+
 "@esbuild/aix-ppc64@0.19.12":
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"
