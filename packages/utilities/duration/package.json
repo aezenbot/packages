@@ -1,7 +1,7 @@
 {
-  "name": "@aezen/logger",
-  "version": "1.1.4",
-  "description": "A simple and lightweight logger module for Aezen Bot in Discord.",
+  "name": "@aezen/duration",
+  "version": "1.0.4",
+  "description": "A simple, lightweight, and fast duration module for Aezen Bot in Discord.",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -13,9 +13,11 @@
     "Aezen",
     "Aezen bot",
     "AezenBot",
-    "logger",
-    "console",
-    "logs"
+    "duration",
+    "ms",
+    "millisecond",
+    "time",
+    "ms"
   ],
   "repository": "git+https://github.com/AezenBot/packages.git",
   "author": "@aezen",
@@ -25,7 +27,7 @@
   },
   "homepage": "https://github.com/AezenBot/packages/tree/main/packages/utilities/logger",
   "dependencies": {
-    "chalk": "^5.3.0",
+    "bignumber.js": "^9.1.2",
     "yarn": "^1.22.22"
   }
 }
