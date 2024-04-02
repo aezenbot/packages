@@ -1,0 +1,11 @@
+{
+  "hello": "Maligayang bati!",
+  "replace": "Maligayangbbati, ako si {name}. Ikinagagalak kong sabihin sa iyo na ang 'placeholders' ay gumagana.",
+  "some": {
+    "very": {
+      "deep": {
+        "path": "Magaling, natagpuan mo ako."
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711895792906" clover="3.2.0">
-  <project timestamp="1711895792906" name="All files">
+<coverage generated="1712063970746" clover="3.2.0">
+  <project timestamp="1712063970746" name="All files">
     <metrics statements="144" coveredstatements="126" conditionals="52" coveredconditionals="31" methods="16" coveredmethods="14" elements="212" coveredelements="171" complexity="0" loc="144" ncloc="144" packages="1" files="3" classes="3"/>
     <file name="constants.ts" path="/home/runner/NavyBarrenOs/packages/utilities/duration/src/constants.ts">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

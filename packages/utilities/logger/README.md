@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1222454458844319826/1710933761137.png?ex=6616466f&is=6603d16f&hm=7e84df9a40d246a27db2b4d5970e4f199e879404e7c986815c6cf62533a973da&" />
-
+  <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1224549770228535296/1712025319044.png?ex=661de5d8&is=660b70d8&hm=b24c29c50295ee0f423aa48ae5044041859cfece46e74e3eee33330a9f0f5672&" />
+  
   # @aezen/logger
   Collection of **open-source** and **free-to-use** modules used for the development of **Aezen Bot**
 
@@ -27,7 +27,7 @@ A little warning that this module is specifically made for the needs of Aezen, s
 ### Prerequisites
 - **Knowledge:** You must know how to use JavaScript, or how to code in general. It is unlikely that you will get help from using this module by making a new issue.
 - **Node Version:** You must use the latest verion of node.
-- **ES Module:** Altough optional, it is preferred to use ES Module in your new Node.JS projects. This module is written using JavaScript ES Module.
+- **ECMAScript:** This module uses ESM. Therefore in order to use this module, your application must use an ES Module.
 
 ### Installation
 ```bash

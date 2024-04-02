@@ -1,0 +1,11 @@
+{
+  "hello": "Hello world!",
+  "replace": "Hello, my name is {name}. I'm happy to tell you that placeholders are working.",
+  "some": {
+    "very": {
+      "deep": {
+        "path": "Wow, you found me."
+      }
+    }
+  }
+}

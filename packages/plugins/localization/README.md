@@ -1,9 +1,9 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1224549770228535296/1712025319044.png?ex=661de5d8&is=660b70d8&hm=b24c29c50295ee0f423aa48ae5044041859cfece46e74e3eee33330a9f0f5672&" />
   
-  # @aezen/duration
+  # @aezen/localization
   Collection of **open-source** and **free-to-use** modules used for the development of **Aezen Bot**
-
+  
   [![npm](https://img.shields.io/npm/v/@aezen/localization?color=crimson&logo=npm&style=flat-square&label=@aezen/localization)](https://www.npmjs.com/package/@aezen/localization)
   [![npm](https://img.shields.io/npm/v/@aezen/duration?color=crimson&logo=npm&style=flat-square&label=@aezen/duration)](https://www.npmjs.com/package/@aezen/duration)
   [![npm](https://img.shields.io/npm/v/@aezen/logger?color=crimson&logo=npm&style=flat-square&label=@aezen/logger)](https://www.npmjs.com/package/@aezen/logger)
@@ -18,13 +18,12 @@ If you find Aezen valuable. helpful, and enjoy using it, please consider support
 
 ## 📍 Features
 - Written with JavaScript ES Module.
-- Supports more time units: decades, centuries, megayear, gigayear, and terayear.
-- Added more duration formatter functions.
-- Uses `bignumber.js` to handle large numbers when converting.
-- Lightweight and easy-to-use.
+- Easy to use and understand.
+- Quick setup.
+- Lightweight and fast localization.
 
 ## ✅ Usage of the Module
-This module is used to convert milleseconds into a human-readable string, and vice versa. Here's an example of how you can use the [duration](https://www.npmjs.com/package/@aezen/duration) module of Aezen.
+This module is made and used to support localization of Discord bots and other application. Here's an example of how you can use the [localization](https://www.npmjs.com/package/@aezen/localization) module of Aezen.
 
 ### Prerequisites
 - **Knowledge:** You must know how to use JavaScript, or how to code in general. It is unlikely that you will get help from using this module by making a new issue.
@@ -33,80 +32,75 @@ This module is used to convert milleseconds into a human-readable string, and vi
 
 ### Installation
 ```bash
-npm install @aezen/duration
+npm install @aezen/localization
 ```
 ```bash
-yarn add @aezen/duration
+yarn add @aezen/localization
 ```
 ```bash
-pnpm add @aezen/duration
+pnpm add @aezen/localization
+```
+
+### Folder Structure for the Languages
+You can add more languages if you want. Only `.json` files are going to be recognized by the module.
+```
+languages/
+├── en.json
+├── tl.json
+├── fr.json
+├── ja.json
+└── zh.json
 ```
 
 ### Example.js
 ```js
 // Import the module
-import { Duration } from "@aezen/duration";
+import Localization from "@aezen/localization";
 
-// You can either use a string pattern or millesconds directly to the Duration class.
-const converted = new Duration("an hour and 66 seconds");
+// Create a new Localization class
+const locale = new Localization(client, {
+  /**
+   * Where your languages are stored. You must specify the directory without the root directory.
+   *
+   * Other examples of path:
+   * src/languages
+   * src/bot/languages
+   * modules/languages
+   */
+  path: "languages",
+  autoReload: true, // If the module should auto reload the languages.
+  autoReloadInterval: 3000 // The interval in milliseconds between reloading.
+})
 
-console.log(converted.ms) // 3666000
-console.log(converted.verbose()) // 1 hour 1 minute 6 seconds
-console.log(converted.colon()) // 01:01:06 (HH:MM:SS format)
-console.log(converted.compact()) // 1h  1m  6s
-console.log(converted.elegant()) //  1 hour, 1 minute and 6 seconds
-console.log(converted.binary()) // 111001010010
-console.log(converted.scientific()) // 3.666e+6
-console.lof(converted.object())
+// IMPORTANT: This must be called, or else the
+// languages won't load and the module won't work.
+await locale.init();
+
+// Now you can get translations! See the directory of the module for the rest of the functions
+locale.getKey("en", "hello")
+locale.getKey("en", "some.very.deep.path.object.to.the.translation")
+```
+
+### Example with placeholders
+You must use `{}` if you wish to make a certain word act as a placeholder. To actually replace the placeholder in your JSON file, you can pass in a 3rd object parameter in the `getKey()` function.
+
+#### ⚠️ The placeholder must be the same with your 3rd parameter. See example below.
+
+```js
+locale.getKey("en", "introduction", {
+  name: "Aezen",
+  developer: "Ark",
+  language: "Discord.JS"
+})
 ```
 ```json
 {
-  "terayear": "0",
-  "gigayear": "0",
-  "megayear": "0",
-  "millennium": "0",
-  "century": "0",
-  "decade": "0",
-  "year": "0",
-  "month": "0",
-  "week": "0",
-  "day": "0",
-  "hour": "1",
-  "minute": "1",
-  "second": "6",
-  "millisecond": "0",
-  "microsecond": "0",
-  "nanosecond": "0"
+  "introduction": "Hello there, my name is {name}. I am developed by {developer} using {language}."
 }
 ```
-
-### Time Unit Calculations
-If you think something is wrong with this calculation, feel free to open an issue. Thank you.
-```js
-export const CommonFactor = new BigNumber(1000).times(60).times(60).times(24)
-
-export const Time = {
-  Nanosecond: new BigNumber(1e-6),
-  Microsecond: new BigNumber(1e-3),
-  Millisecond: new BigNumber(1),
-  Second: new BigNumber(1000),
-  Minute: new BigNumber(1000).times(60),
-  Hour: new BigNumber(1000).times(60).times(60),
-  Day: CommonFactor,
-  Week: CommonFactor.times(7),
-  Year: CommonFactor.times(365),
-  Month: CommonFactor.times(30.436875),
-  Decade: CommonFactor.times(365).times(10),
-  Century: CommonFactor.times(365).times(100),
-  Millennium: CommonFactor.times(365).times(1000),
-  Megayear: CommonFactor.times(365).times(1e6),
-  Gigayear: CommonFactor.times(365).times(1e9),
-  Terayear: CommonFactor.times(365).times(1e12)
-};
 ```
-
-## ⚠️ Credits
-This module is forked and modified from [sapphiredev's module](https://github.com/sapphiredev/utilities/tree/main/packages%2Fduration), so credits to the original author. If you have copyright issues, please contact me first.
+Hello there, my name is Aezen. I am developed by Ark using Discord.JS.
+```
 
 ## 🤝 Contribute to the Project
 We appreciate your interest in contributing to the development of Aezen! Whether you're reporting issues, submitting pull requests, or helping with documentation, your contributions make Aezen better for everyone. Here's how you can get involved:
