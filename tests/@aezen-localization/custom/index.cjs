@@ -1,4 +1,4 @@
-const Localization = require("../../../packages/plugins/localization/dist/index.js");
+const Localization = require("@aezen/localization");
 const path = require("path");
 const colors = require("colors");
 

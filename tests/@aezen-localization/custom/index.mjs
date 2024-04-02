@@ -1,4 +1,4 @@
-import Localization from "../../../packages/plugins/localization/dist/index.js";
+import Localization from "@aezen/localization";
 import path from "path";
 import chalk from "chalk";
 

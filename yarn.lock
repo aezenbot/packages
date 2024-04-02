@@ -10,6 +10,14 @@
     bignumber.js "^9.1.2"
     yarn "^1.22.22"
 
+"@aezen/localization@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@aezen/localization/-/localization-1.1.0.tgz#b973d3fb61d05f2b195577a41640c8e15bb32427"
+  integrity sha512-reQ7t2CSOmm4rME4+i5fIVO3fnCb7X9P7DGfx9/pzpStY2tG47VLf5o1P8FX2o+wI7jgdwoj23joSNYrwqjvJg==
+  dependencies:
+    chalk "^5.3.0"
+    yarn "^1.22.22"
+
 "@aezen/logger@^1.1.4":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@aezen/logger/-/logger-1.1.4.tgz#cf1701073e91691f54749b1e80898950623665ea"
