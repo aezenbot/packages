@@ -28,7 +28,7 @@ This module is made and used to support localization of Discord bots and other a
 ### Prerequisites
 - **Knowledge:** You must know how to use JavaScript, or how to code in general. It is unlikely that you will get help from using this module by making a new issue.
 - **Node Version:** You must use the latest verion of node.
-- **ECMAScript:** This module uses ESM. Therefore in order to use this module, your application must use an ES Module.
+- **ECMAScript:** This module uses ESM. In order to use this module, your application must be using ES Module.
 
 ### Installation
 ```bash
@@ -56,18 +56,11 @@ languages/
 ```js
 // Import the module
 import Localization from "@aezen/localization";
+import path from "path";
 
 // Create a new Localization class
 const locale = new Localization(client, {
-  /**
-   * Where your languages are stored. You must specify the directory without the root directory.
-   *
-   * Other examples of path:
-   * src/languages
-   * src/bot/languages
-   * modules/languages
-   */
-  path: "languages",
+  path: path.join(process.cwd, "src/languages"), // The full path where your locales are stored.
   autoReload: true, // If the module should auto reload the languages.
   autoReloadInterval: 3000 // The interval in milliseconds between reloading.
 })

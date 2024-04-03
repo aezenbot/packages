@@ -1,6 +1,6 @@
 {
   "name": "@aezen/localization",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple, lightweight, fast, and easy-to-use localization module for Aezen Bot in Discord.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
