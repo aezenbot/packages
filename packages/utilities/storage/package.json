@@ -1,6 +1,6 @@
 {
   "name": "@aezen/storage",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple storage utility class for storing and retrieving variables and objects for Aezen Bot in Discord.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
