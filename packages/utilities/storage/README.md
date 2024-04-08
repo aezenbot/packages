@@ -1,9 +1,9 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1224549770228535296/1712025319044.png?ex=661de5d8&is=660b70d8&hm=b24c29c50295ee0f423aa48ae5044041859cfece46e74e3eee33330a9f0f5672&" />
   
-  # @aezen/localization
+  # @aezen/storage
   Collection of **open-source** and **free-to-use** modules used for the development of **Aezen Bot**
-  
+
   [![npm](https://img.shields.io/npm/v/@aezen/localization?color=crimson&logo=npm&style=flat-square&label=@aezen/localization)](https://www.npmjs.com/package/@aezen/localization)
   [![npm](https://img.shields.io/npm/v/@aezen/duration?color=crimson&logo=npm&style=flat-square&label=@aezen/duration)](https://www.npmjs.com/package/@aezen/duration)
   [![npm](https://img.shields.io/npm/v/@aezen/logger?color=crimson&logo=npm&style=flat-square&label=@aezen/logger)](https://www.npmjs.com/package/@aezen/logger)
@@ -18,82 +18,51 @@ If you find Aezen valuable. helpful, and enjoy using it, please consider support
 - **🌊 Spread the Word:** Share Aezen with your friends, communities, or on social media. Your word-of-mouth recommendations help us grow and create a vibrant user community.
 
 ## 📍 Features
-- Written with JavaScript ES Module.
-- Easy to use and understand.
-- Quick setup.
-- Lightweight and fast localization.
+- Written with TypeScript.
+- Compiled to ES Module.
+- Lightweight.
 
 ## ✅ Usage of the Module
-This module is made and used to support localization of Discord bots and other application. Here's an example of how you can use the [localization](https://www.npmjs.com/package/@aezen/localization) module of Aezen.
+A simple storage utility class for storing and retrieving variables and objects. Here's how you can use the [storage](https://www.npmjs.com/package/@aezen/storage) module:
 
 ### Prerequisites
 - **Knowledge:** You must know how to use JavaScript, or how to code in general. It is unlikely that you will get help from using this module by making a new issue.
 - **Node Version:** You must use the latest verion of node.
-- **ECMAScript:** This module uses ESM. In order to use this module, your application must be using ES Module.
+- **ECMAScript:** This module uses ESM. Therefore in order to use this module, your application must use an ES Module.
 
 ### Installation
 ```bash
-npm install @aezen/localization
+npm install @aezen/storage
 ```
 ```bash
-yarn add @aezen/localization
+yarn add @aezen/storage
 ```
 ```bash
-pnpm add @aezen/localization
-```
-
-### Folder Structure for the Languages
-You can add more languages if you want. Only `.json` files are going to be recognized by the module.
-```
-languages/
-├── en.json
-├── tl.json
-├── fr.json
-├── ja.json
-└── zh.json
+pnpm add @aezen/storage
 ```
 
 ### Example.js
 ```js
-// Import the module
-import Localization from "@aezen/localization";
-import path from "path";
+// Import the Storage module
+import Storage from '@aezen/storage';
 
-// Create a new Localization class
-const locale = new Localization(client, {
-  path: path.join(process.cwd, "src/languages"), // The full path where your locales are stored.
-  autoReload: true, // If the module should auto reload the languages.
-  autoReloadInterval: 3000 // The interval in milliseconds between reloading.
-})
+// Set variables
+Storage.set('name', 'John');
+Storage.set('age', 30);
 
-// IMPORTANT: This must be called, or else the
-// languages won't load and the module won't work.
-await locale.init();
+// Retrieve variables
+const name = Storage.get('name');
+const age = Storage.get('age');
+console.log(name); // Output: John
+console.log(age); // Output: 30
 
-// Now you can get translations! See the directory of the module for the rest of the functions
-locale.getKey("en", "hello")
-locale.getKey("en", "some.very.deep.path.object.to.the.translation")
-```
+// Get all stored data
+const allData = Storage.getAll();
+console.log(allData); // Output: { name: 'John', age: 30 }
 
-### Example with placeholders
-You must use `{}` if you wish to make a certain word act as a placeholder. To actually replace the placeholder in your JSON file, you can pass in a 3rd object parameter in the `getKey()` function.
-
-#### ⚠️ The placeholder must be the same with your 3rd parameter. See example below.
-
-```js
-locale.getKey("en", "introduction", {
-  name: "Aezen",
-  developer: "Ark",
-  language: "Discord.JS"
-})
-```
-```json
-{
-  "introduction": "Hello there, my name is {name}. I am developed by {developer} using {language}."
-}
-```
-```
-Hello there, my name is Aezen. I am developed by Ark using Discord.JS.
+// Remove a variable
+Storage.remove('age');
+console.log(Storage.get('age')); // Output: undefined
 ```
 
 ## 🤝 Contribute to the Project

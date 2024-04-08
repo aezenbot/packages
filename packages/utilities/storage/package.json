@@ -1,0 +1,29 @@
+{
+  "name": "@aezen/storage",
+  "version": "1.0.0",
+  "description": "A simple storage utility class for storing and retrieving variables and objects for Aezen Bot in Discord.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup"
+  },
+  "private": false,
+  "keywords": [
+    "Aezen",
+    "Aezen bot",
+    "AezenBot",
+    "storage",
+    "container",
+    "variables"
+  ],
+  "repository": "git+https://github.com/AezenBot/packages.git",
+  "author": "@aezen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AezenBot/packages/issues"
+  },
+  "homepage": "https://github.com/AezenBot/packages/tree/main/packages/utilities/storage",
+  "dependencies": {}
+}

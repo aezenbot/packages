@@ -7,6 +7,7 @@
   [![npm](https://img.shields.io/npm/v/@aezen/localization?color=crimson&logo=npm&style=flat-square&label=@aezen/localization)](https://www.npmjs.com/package/@aezen/localization)
   [![npm](https://img.shields.io/npm/v/@aezen/duration?color=crimson&logo=npm&style=flat-square&label=@aezen/duration)](https://www.npmjs.com/package/@aezen/duration)
   [![npm](https://img.shields.io/npm/v/@aezen/logger?color=crimson&logo=npm&style=flat-square&label=@aezen/logger)](https://www.npmjs.com/package/@aezen/logger)
+  [![npm](https://img.shields.io/npm/v/@aezen/storage?color=crimson&logo=npm&style=flat-square&label=@aezen/storage)](https://www.npmjs.com/package/@aezen/storage)
 </div>
 
 ## 🩵 Support the Project
