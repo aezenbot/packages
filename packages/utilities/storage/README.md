@@ -65,6 +65,30 @@ Storage.remove('age');
 console.log(Storage.get('age')); // Output: undefined
 ```
 
+### Shared storage
+This module is a singleton module meaning any changes you make in your storage *should* sync with all other imports **if** done correctly. How can you do this? You need to run the module and imports of it in the same execution context. Separately running files that imports this module will create their own instance of the module instead of sharing with each other. Here's an example:
+
+```js
+// file1.ts
+import storage from "@aezen/storage";
+import file2 from "./file2";
+
+storage.set("data1", "Oh hello!")
+storage.set("data2", "Woah!")
+
+console.log(storage)
+console.log(file2())
+```
+```js
+// file2.ts
+import storage from "@aezen/storage";
+
+export default function file2() {
+  return storage
+}
+```
+Here, we are trying to make these 2 files share the same instance of the storage module. Running ```file1.ts``` using ```tsx file1.ts``` will have the same output.
+
 ## 🤝 Contribute to the Project
 We appreciate your interest in contributing to the development of Aezen! Whether you're reporting issues, submitting pull requests, or helping with documentation, your contributions make Aezen better for everyone. Here's how you can get involved:
 - **🐛 Found a Bug or Have a Feature Request?** If you've encountered a bug or have a feature in mind, [existing issues](https://github.com/AezenBot/packages/issues) to see if it has already been reported. If not, feel free to [open a new issue](https://github.com/AezenBot/packages/issues/new) with as much detail as possible, including steps to reproduce the bug or a clear description of the new feature.
