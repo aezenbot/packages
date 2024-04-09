@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@aezen/logger@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@aezen/logger/-/logger-1.1.4.tgz#cf1701073e91691f54749b1e80898950623665ea"
+  integrity sha512-RkK9d9Hs91SNB+1XQr49QydLaJ+S4xTTkfFMjJ0kWpNmh0UCdpIE9iYHFK+mgmyJc+CADgt00yBSQOLtrPP8rw==
+  dependencies:
+    chalk "^5.3.0"
+    yarn "^1.22.22"
+
 "@aezen/storage@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@aezen/storage/-/storage-1.0.1.tgz#1f1cd2b761438152ca1e549536f41e29d96a9c0d"
@@ -1106,6 +1114,11 @@ chalk@^4.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chalk@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
+  integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -2874,6 +2887,11 @@ yargs@^17.3.1:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
+
+yarn@^1.22.22:
+  version "1.22.22"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz#ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  integrity sha512-prL3kGtyG7o9Z9Sv8IPfBNrWTDmXB4Qbes8A9rEzt6wkJV8mUvoirjU0Mp3GGAU06Y0XQyA3/2/RQFVuK7MTfg==
 
 yocto-queue@^0.1.0:
   version "0.1.0"

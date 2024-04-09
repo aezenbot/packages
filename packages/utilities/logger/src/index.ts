@@ -53,11 +53,13 @@ function timestamp() {
   return new Date().toLocaleDateString("en-US", options);
 }
 
-function createInfo(options: LoggerOptions, level: LoggerLevels) {
+function createInfo(options: LoggerOptions, level: LoggerLevels, customLevelText?: string | null) {
   const date = options.timestamp === true ? customColors.grayLight(`[${timestamp()}]`) : null;
   const prefix = options.prefix ? chalk.bgGray.bold(`[ ${options.prefix} ]`) : null;
-  const formattedLevel = levels[level](level.toUpperCase());
-
+  const formattedLevel = customLevelText ?
+    levels[level](customLevelText.toUpperCase()) :
+    levels[level](level.toUpperCase());
+  
   return `${prefix ? `${prefix} ` : ""}${date ? `${date} ` : ""}${formattedLevel}`;
 }
 
@@ -120,14 +122,19 @@ export default class Logger {
     });
   }
 
-  error(...messages: any) {
-    messages.forEach((arg: any) => {
-      if (typeof arg !== "string") {
-        console.log(`${createInfo(this.options, "error")}\n`, arg);
-      } else {
-        console.log(`${createInfo(this.options, "error")}  ${customColors.redLight(arg)}`);
-      }
-    });
+  error(error: Error | string) {
+    if (error instanceof Error) {
+      const type = error.name
+      const message = error.message
+      //const stackLines = error.stack ? error.stack.split("\n").filter((line: string) => line.startsWith("    at")).join("\n") : null
+      const stackLines = error.stack ? error.stack.split("\n").slice(1).join("\n") : null;
+      
+      console.log(`${createInfo(this.options, "error", type)}  ${chalk.red(message)} ${stackLines ? `\n\n${chalk.gray(stackLines)}` : ""}`);
+    } else if (typeof error === "string") {
+      console.log(`${createInfo(this.options, "error")}  ${chalk.red(error)}`);
+    } else {
+      console.log(`${createInfo(this.options, "error")} ${error}`);
+    }
   }
 
   fatal(...messages: any) {
