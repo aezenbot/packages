@@ -1,6 +1,6 @@
 type Listener<T> = (newValue: T, oldValue: T) => void;
 
-export class GlobalStore<T> {
+export class Store<T> {
   private data: Map<string, T> = new Map();
   private listeners: Map<string, Set<Listener<T>>> = new Map();
   
@@ -63,22 +63,22 @@ export class GlobalStore<T> {
 }
 
 export class NamedStores {
-  private stores: Map<string, GlobalStore<any>> = new Map();
+  private stores: Map<string, Store<any>> = new Map();
 
-  public createStore<T>(name: string): GlobalStore<T> {
+  public createStore<T>(name: string): Store<T> {
     if (!name) throw new Error("Name must be non-empty");
 
     if (this.stores.has(name)) {
       throw new Error(`Store with name '${name}' already exists`);
     }
 
-    const store = new GlobalStore<T>();
+    const store = new Store<T>();
     this.stores.set(name, store);
     
     return store;
   }
 
-  public getStore<T>(name: string): GlobalStore<T> {
+  public getStore<T>(name: string): Store<T> {
     if (!name) throw new Error("Name must be non-empty");
 
     const store = this.stores.get(name);
@@ -87,7 +87,7 @@ export class NamedStores {
       throw new Error(`Store with name '${name}' does not exist`);
     }
     
-    return store as GlobalStore<T>;
+    return store as Store<T>;
   }
 
   public deleteStore(name: string): void {

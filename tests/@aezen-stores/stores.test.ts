@@ -1,10 +1,10 @@
-import { GlobalStore, NamedStores } from "../../../packages/utilities/stores/src/index";
+import { Store, NamedStores } from "../../packages/utilities/stores/src/index";
 
-describe("GlobalStore", () => {
-  let store: GlobalStore<number>;
+describe("Store", () => {
+  let store: Store<number>;
 
   beforeEach(() => {
-    store = new GlobalStore<number>();
+    store = new Store<number>();
   });
 
   test("set and get values", () => {
@@ -84,7 +84,7 @@ describe("NamedStores", () => {
   });
 
   describe("setting and getting data in named stores", () => {
-    let store: GlobalStore<number>;
+    let store: Store<number>;
 
     beforeEach(() => {
       store = namedStores.createStore<number>("numbers");

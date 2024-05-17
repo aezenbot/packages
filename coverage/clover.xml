@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715944941851" clover="3.2.0">
-  <project timestamp="1715944941851" name="All files">
+<coverage generated="1715953706929" clover="3.2.0">
+  <project timestamp="1715953706929" name="All files">
     <metrics statements="44" coveredstatements="43" conditionals="22" coveredconditionals="18" methods="10" coveredmethods="10" elements="76" coveredelements="71" complexity="0" loc="44" ncloc="44" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="/home/runner/Packages/packages/utilities/stores/src/index.ts">
       <metrics statements="44" coveredstatements="43" conditionals="22" coveredconditionals="18" methods="10" coveredmethods="10"/>

@@ -1,6 +1,6 @@
 {
   "name": "@aezen/stores",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A simple and lightweight package which provides a flexible TypeScript-based store system for managing data with event listener support for observing data changes.",
   "author": "AezenBot (https://github.com/AezenBot)",
   "license": "ISC",
@@ -15,9 +15,9 @@
     "Aezen",
     "Aezen bot",
     "AezenBot",
-    "logger",
-    "console",
-    "logs"
+    "store",
+    "storage",
+    "data"
   ],
   "repository": "git+https://github.com/AezenBot/packages.git",
   "bugs": {
