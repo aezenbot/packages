@@ -18,7 +18,7 @@ If you find Aezen valuable, helpful, and enjoy using it, please consider support
 - **🌊 Spread the Word:** Share Aezen with your friends, communities, or on social media. Your word-of-mouth recommendations help us grow and create a vibrant user community.
 
 ## 📚 Documentation
-See the full installation, usage, examples, and API documentation of this package in [Aezen's documenation page](https://docs.aezen.xyz/).
+See the full installation, usage, examples, and API documentation of these packages in [Aezen's documenation page](https://docs.aezen.xyz/).
 
 ## 🤝 Contribute to the Project
 We appreciate your interest in contributing to the development of Aezen! Whether you're reporting issues, submitting pull requests, or helping with documentation, your contributions make Aezen better for everyone. Here's how you can get involved:
