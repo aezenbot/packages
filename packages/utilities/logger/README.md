@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1224549770228535296/1712025319044.png?ex=661de5d8&is=660b70d8&hm=b24c29c50295ee0f423aa48ae5044041859cfece46e74e3eee33330a9f0f5672&" />
+  <img src="https://media.discordapp.net/attachments/1183338541690933288/1241012413118156830/1710933760586.png?ex=6648a660&is=664754e0&hm=dca0cdf9218052fa6089af4379e79c7e17c2189aecdaafbbe3317699fcbe4029&" />
   
   # @aezen/logger
   Collection of **open-source** and **free-to-use** modules used for the development of **Aezen Bot**

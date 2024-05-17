@@ -1,12 +1,13 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/attachments/1183338541690933288/1222454458844319826/1710933761137.png?ex=6616466f&is=6603d16f&hm=7e84df9a40d246a27db2b4d5970e4f199e879404e7c986815c6cf62533a973da&" />
-
-  # Aezen Packages
-  Collection of **open-source** and **free-to-use** modules used for the development of **Aezen**
+  <img src="https://media.discordapp.net/attachments/1183338541690933288/1241012413118156830/1710933760586.png?ex=6648a660&is=664754e0&hm=dca0cdf9218052fa6089af4379e79c7e17c2189aecdaafbbe3317699fcbe4029&" />
   
+  # Aezen's Packages
+  Collection of **open-source** and **free-to-use** modules used for the development of **Aezen Bot**
+
   [![npm](https://img.shields.io/npm/v/@aezen/localization?color=crimson&logo=npm&style=flat-square&label=@aezen/localization)](https://www.npmjs.com/package/@aezen/localization)
   [![npm](https://img.shields.io/npm/v/@aezen/duration?color=crimson&logo=npm&style=flat-square&label=@aezen/duration)](https://www.npmjs.com/package/@aezen/duration)
   [![npm](https://img.shields.io/npm/v/@aezen/logger?color=crimson&logo=npm&style=flat-square&label=@aezen/logger)](https://www.npmjs.com/package/@aezen/logger)
+  [![npm](https://img.shields.io/npm/v/@aezen/storage?color=crimson&logo=npm&style=flat-square&label=@aezen/stores)](https://www.npmjs.com/package/@aezen/stores)
 </div>
 
 ## 🩵 Support the Project
@@ -15,7 +16,6 @@ If you find Aezen valuable, helpful, and enjoy using it, please consider support
 - **☕ Buy Us a Coffee:** If you prefer a one-time contribution, you can also buy us a coffee. Every coffee supports the developers and fuels late-night coding sessions to bring you the best Aezen experience.
 - **⭐ Star the Repository:** Show your love for Aezen by starring the GitHub repository. It helps us gain visibility and attract more users to the community.
 - **🌊 Spread the Word:** Share Aezen with your friends, communities, or on social media. Your word-of-mouth recommendations help us grow and create a vibrant user community.
-
 
 ## 🤝 Contribute to the Project
 We appreciate your interest in contributing to the development of Aezen! Whether you're reporting issues, submitting pull requests, or helping with documentation, your contributions make Aezen better for everyone. Here's how you can get involved:
