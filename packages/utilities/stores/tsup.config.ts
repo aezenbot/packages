@@ -15,7 +15,6 @@ export default [
   defineConfig({
     ...baseOptions,
     outDir: "dist",
-    format: "esm",
-    outExtension: () => ({ js: ".js" })
+    format: "esm"
   })
 ]

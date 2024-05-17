@@ -9,9 +9,12 @@
   "dependencies": {
     "@aezen/logger": "^1.1.4",
     "@aezen/storage": "^1.0.1",
+    "@types/jest": "^29.5.12",
     "jest": "^29.7.0"
   },
   "devDependencies": {
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2"
   }

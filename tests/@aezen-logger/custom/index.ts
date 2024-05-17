@@ -13,6 +13,6 @@ logger.success("This is a success message.")
 logger.fatal("This is a fatal message.")
 
 logger.error("This is a string error message.")
-logger.error(new Error("This is an regular error message."))
+logger.error(new Error("This is a regular error message."))
 logger.error(new TypeError("This is a type error message."))
-             logger.error(new RangeError("This is a range error message."))
+logger.error(new RangeError("This is a range error message."))

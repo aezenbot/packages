@@ -1,7 +1,9 @@
 {
   "name": "@aezen/duration",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple, lightweight, and fast duration module for Aezen Bot in Discord.",
+  "author": "AezenBot (https://github.com/AezenBot)",
+  "license": "ISC",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -20,12 +22,10 @@
     "ms"
   ],
   "repository": "git+https://github.com/AezenBot/packages.git",
-  "author": "@aezen",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/AezenBot/packages/issues"
   },
-  "homepage": "https://github.com/AezenBot/packages/tree/main/packages/utilities/logger",
+  "homepage": "https://aezen.xyz",
   "dependencies": {
     "bignumber.js": "^9.1.2",
     "yarn": "^1.22.22"
