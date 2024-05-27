@@ -1,9 +1,11 @@
 {
   "name": "@aezen/duration",
-  "version": "1.0.5",
-  "description": "A simple, lightweight, and fast duration module for Aezen Bot in Discord.",
-  "author": "AezenBot (https://github.com/AezenBot)",
-  "license": "ISC",
+  "version": "1.0.7",
+  "description": "A simple and easy-to-use module for converting milliseconds into a human-readable string–supports many formats such as compact, colon, etc.",
+  "author": "aezenbot (https://github.com/aezenbot)",
+  "license": "MIT",
+  "repository": "git+https://github.com/aezenbot/packages.git",
+  "homepage": "https://aezen.xyz",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -21,11 +23,9 @@
     "time",
     "ms"
   ],
-  "repository": "git+https://github.com/AezenBot/packages.git",
-  "bugs": {
-    "url": "https://github.com/AezenBot/packages/issues"
+  "publishConfig": {
+    "provenance": true
   },
-  "homepage": "https://aezen.xyz",
   "dependencies": {
     "bignumber.js": "^9.1.2",
     "yarn": "^1.22.22"

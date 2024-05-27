@@ -1,9 +1,11 @@
 {
   "name": "@aezen/logger",
-  "version": "1.1.6",
-  "description": "A simple and lightweight logger module for Aezen Bot in Discord.",
-  "author": "AezenBot (https://github.com/AezenBot)",
-  "license": "ISC",
+  "version": "1.1.8",
+  "description": "A simple and customized logger module for Aezen. Built using TypeScript and chalk for the styling.",
+  "author": "aezenbot (https://github.com/aezenbot)",
+  "license": "MIT",
+  "repository": "git+https://github.com/aezenbot/packages.git",
+  "homepage": "https://aezen.xyz",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,11 +21,9 @@
     "console",
     "logs"
   ],
-  "repository": "git+https://github.com/AezenBot/packages.git",
-  "bugs": {
-    "url": "https://github.com/AezenBot/packages/issues"
+  "publishConfig": {
+    "provenance": true
   },
-  "homepage": "https://aezen.xyz",
   "dependencies": {
     "chalk": "^5.3.0",
     "yarn": "^1.22.22"
